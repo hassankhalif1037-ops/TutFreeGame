@@ -1,0 +1,3 @@
+/Users/hassankhalif/coding-file/PersonalProjects/LearningC/Cgames/TutFreeGame/build/_deps/raylib-subbuild/CMakeFiles/raylib-populate.dir
+/Users/hassankhalif/coding-file/PersonalProjects/LearningC/Cgames/TutFreeGame/build/_deps/raylib-subbuild/CMakeFiles/edit_cache.dir
+/Users/hassankhalif/coding-file/PersonalProjects/LearningC/Cgames/TutFreeGame/build/_deps/raylib-subbuild/CMakeFiles/rebuild_cache.dir

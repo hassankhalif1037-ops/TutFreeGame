@@ -1,74 +1,14 @@
 #include "raylib.h"
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-
-struct playerCharacteristics
+#include "gameFunctionality.h"
+#include "playerFunc.h"
+typedef struct 
 {
-    int speed;
-    const Vector2 size = {50, 50};
-    Rectangle player;
-    Vector2 coordinates;
-    void movement()
-    {
-        if (IsKeyDown(KEY_D))
-        {
-            printf("PRESSED D!! \n");
-            coordinates.x += speed;
-            printf("coordinates.x : %f\n", coordinates.x);
-        }
-        if (IsKeyDown(KEY_A))
-        {
-            printf("PRESSED A!! \n");
-            coordinates.x -= speed;
-            printf("coordinates.x : %f\n", coordinates.x);
-        }
-        if (IsKeyDown(KEY_W))
-        {
-            printf("PRESSED W!! \n");
-            coordinates.y -= speed;
-            printf("coordinates.y : %f\n", coordinates.y);
-        }
-        if (IsKeyDown(KEY_S))
-        {
-            printf("PRESSED W!! \n");
-            coordinates.y += speed;
-            printf("coordinates.y : %f\n", coordinates.y);
-        }
-    }
-    float gravitySpeed = 0.2f;
-    int fallingSpeed = 70;
-    void gravity()
-    {
-        coordinates.y += fallingSpeed * gravitySpeed;
-        fallingSpeed += 5;
-        int time = 0;
-        while (time < 60){
-            time += 1;
-        }
-    }
+    Vector2 velocity;
+    Texture2D Sprite;
+}Sprite;
 
-    void collision()
-    {
-        printf("IGNORE");
-        
-    }
-};
-struct buildings
-{
-    float platformsDistances;
-    int platformsYcord;
-    Vector2 platformSize;
-    Rectangle platforms[14];
-    
-    void createBuildings()
-    {
-        for (int i = 1; i < 14; i++)
-        {
-            platforms[i] = {0 + (i * platformsDistances) +  platformSize.x,(float) platformsYcord , platformSize.x, platformSize.y};
-        }
-    }
-};
+
 
 int main()
 {
@@ -76,14 +16,13 @@ int main()
     
     
     InitWindow(screen.x, screen.y, "Gravity test");
-    int count = 0;
 
     buildings builds = buildings();
     builds.platformsDistances = 1000;
     builds.platformSize = {500, 500};
     builds.platformsYcord = 500;
     builds.platforms[0] = {0,(float) builds.platformsYcord , builds.platformSize.x + 500, builds.platformSize.y};
-    builds.createBuildings();
+    createBuildings(&builds.platforms[14],&builds.platformsDistances , &builds.platformSize, &builds.platformsYcord);
 
 
     playerCharacteristics pc = playerCharacteristics();

@@ -1,0 +1,14 @@
+# Target labels
+ raylib-populate
+# Source files and their labels
+/Users/hassankhalif/coding-file/PersonalProjects/LearningC/Cgames/TutFreeGame/build/_deps/raylib-subbuild/CMakeFiles/raylib-populate
+/Users/hassankhalif/coding-file/PersonalProjects/LearningC/Cgames/TutFreeGame/build/_deps/raylib-subbuild/CMakeFiles/raylib-populate.rule
+/Users/hassankhalif/coding-file/PersonalProjects/LearningC/Cgames/TutFreeGame/build/_deps/raylib-subbuild/CMakeFiles/raylib-populate-complete.rule
+/Users/hassankhalif/coding-file/PersonalProjects/LearningC/Cgames/TutFreeGame/build/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-build.rule
+/Users/hassankhalif/coding-file/PersonalProjects/LearningC/Cgames/TutFreeGame/build/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-configure.rule
+/Users/hassankhalif/coding-file/PersonalProjects/LearningC/Cgames/TutFreeGame/build/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-download.rule
+/Users/hassankhalif/coding-file/PersonalProjects/LearningC/Cgames/TutFreeGame/build/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-install.rule
+/Users/hassankhalif/coding-file/PersonalProjects/LearningC/Cgames/TutFreeGame/build/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-mkdir.rule
+/Users/hassankhalif/coding-file/PersonalProjects/LearningC/Cgames/TutFreeGame/build/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-patch.rule
+/Users/hassankhalif/coding-file/PersonalProjects/LearningC/Cgames/TutFreeGame/build/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-test.rule
+/Users/hassankhalif/coding-file/PersonalProjects/LearningC/Cgames/TutFreeGame/build/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-update.rule
