@@ -1,54 +1,63 @@
 #pragma once
 #include "raylib.h"
 #include <stdio.h>
-struct playerCharacteristics
-{
-    int speed;
-    const Vector2 size = {50, 50};
-    Rectangle player;
-    Vector2 coordinates;
-    
-    float gravitySpeed = 0.2f;
-    int fallingSpeed = 70;
-    
 
-    
-};
-void movement()
+
+enum SpriteDirection { Left = -1, Right = 1};
+typedef struct Sprite
 {
+    Texture2D Sprite;
+    Rectangle luffyRect;
+    Vector2 vel;
+    float dashVel;
+    SpriteDirection dir;
+} Sprite;
+//when we don't move, we have no velocity. But when we do, our velocity is ____
+void movement(Sprite *sprite)
+{
+    sprite->vel.x = 0;
+    sprite->dashVel = 0;
     if (IsKeyDown(KEY_D))
     {
-        printf("PRESSED D!! \n");
-        coordinates.x += speed;
-        printf("coordinates.x : %f\n", coordinates.x);
+        DrawText("Moving RIGHT!", 0, 0, 25, WHITE);
+        sprite->vel.x = 200.0f;
+        sprite->dir = SpriteDirection::Right;
     }
     if (IsKeyDown(KEY_A))
     {
-        printf("PRESSED A!! \n");
-        coordinates.x -= speed;
-        printf("coordinates.x : %f\n", coordinates.x);
+        DrawText("Moving LEFT!", 0, 0, 25, WHITE);
+        sprite->vel.x = -200.0f;
+        sprite->dir = SpriteDirection::Left;
     }
-    if (IsKeyDown(KEY_W))
+    if (IsKeyPressed(KEY_W))
     {
-        printf("PRESSED W!! \n");
-        coordinates.y -= speed;
-        printf("coordinates.y : %f\n", coordinates.y);
+        sprite->vel.y = -1000.0f;
     }
-    if (IsKeyDown(KEY_S))
+    if (IsKeyPressed(KEY_Q))
     {
-        printf("PRESSED W!! \n");
-        coordinates.y += speed;
-        printf("coordinates.y : %f\n", coordinates.y);
+        sprite->dashVel = 700.0f;
     }
 }
-void gravity()
+void x_apply_speed(Sprite *sprite)
 {
-    coordinates.y += fallingSpeed * gravitySpeed;
-    fallingSpeed += 5;
-    GetFrameTime();
+    sprite->luffyRect.x += sprite->vel.x * GetFrameTime();
+    sprite->dashVel += 5;
+    sprite->luffyRect.x += sprite->dashVel * GetFrameTime();
+    
+    
 }
-void collision()
+void y_apply_speed(Sprite *sprite)
 {
-    printf("IGNORE");
-        
+    sprite->luffyRect.y += sprite->vel.y * GetFrameTime();
+}
+void apply_gravity(Sprite *sprite)
+{
+    //All you are doing is changing velocity
+    //this doesn't change global position
+    //apply speed makes sure this happens
+    sprite->vel.y += 50.0f;
+    if (sprite->vel.y > 500.0f)
+    {
+        sprite->vel.y = 500.0f;
+    }
 }
