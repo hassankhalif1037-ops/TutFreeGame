@@ -6,7 +6,7 @@ CXX_DEFINES = -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP
 
 CXX_INCLUDES = -I/Users/hassankhalif/coding-file/PersonalProjects/LearningC/Cgames/TutFreeGame/Include -I/Users/hassankhalif/coding-file/PersonalProjects/LearningC/Cgames/TutFreeGame/build/_deps/raylib-src/src
 
-CXX_FLAGSarm64 = -g -std=c++20 -arch arm64
+CXX_FLAGSarm64 = -std=c++20 -arch arm64
 
-CXX_FLAGS = -g -std=c++20 -arch arm64
+CXX_FLAGS = -std=c++20 -arch arm64
 

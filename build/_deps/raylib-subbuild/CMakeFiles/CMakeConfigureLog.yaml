@@ -35,6 +35,9 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/pkg/env/global/bin/"
       - "/Library/Apple/usr/bin/"
+      - "/Users/hassankhalif/.vscode/extensions/vscjava.vscode-java-debug-0.60.0/bundled/scripts/noConfigScripts/"
+      - "/Users/hassankhalif/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/copilot-shim/"
     searched_directories:
       - "/Library/Frameworks/Python.framework/Versions/3.10/bin/uname"
       - "/opt/homebrew/bin/uname"
@@ -62,6 +65,12 @@ events:
         - "/pkg/env/global/bin"
         - "/Library/Apple/usr/bin"
         - "/opt/homebrew/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.10/bin"
+        - "/opt/homebrew/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
+        - "/Users/hassankhalif/.vscode/extensions/vscjava.vscode-java-debug-0.60.0/bundled/scripts/noConfigScripts"
+        - "/Users/hassankhalif/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/copilot-shim"
   -
     kind: "message-v1"
     backtrace:
@@ -104,6 +113,9 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/pkg/env/global/bin/"
       - "/Library/Apple/usr/bin/"
+      - "/Users/hassankhalif/.vscode/extensions/vscjava.vscode-java-debug-0.60.0/bundled/scripts/noConfigScripts/"
+      - "/Users/hassankhalif/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/copilot-shim/"
     searched_directories:
       - "/Library/Frameworks/Python.framework/Versions/3.10/bin/install_name_tool"
       - "/opt/homebrew/bin/install_name_tool"
@@ -131,5 +143,11 @@ events:
         - "/pkg/env/global/bin"
         - "/Library/Apple/usr/bin"
         - "/opt/homebrew/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.10/bin"
+        - "/opt/homebrew/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
+        - "/Users/hassankhalif/.vscode/extensions/vscjava.vscode-java-debug-0.60.0/bundled/scripts/noConfigScripts"
+        - "/Users/hassankhalif/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/copilot-shim"
       CMAKE_INSTALL_PREFIX: "/usr/local"
 ...
